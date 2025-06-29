@@ -1,0 +1,41 @@
+server:
+  port: 8080
+
+spring:
+  auth:
+    allowed:
+      end:
+        uri:
+          patterns:
+            - /auth/**
+            - /api/**
+          admins:
+            - /user/**
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+  security:
+    user:
+      name: admin
+      password: admin@123#
+
+# JWT Configuration
+jwt:
+  issuer: nexus-auth
+  secret: ZGFpbWxlci10cnVja3MtbmV4dXMtYXV0aC1zZXJ2aWNlLXNlY3JldC1rZXk=
+  access.token.time.to.expire: 15 #in min
+  refresh.token.time.to.expire: 30 #in days
+
+# Logging
+logging:
+  level:
+    org.springframework.security: DEBUG
+    root: INFO
+    com.daimlertrucksasia.it.dsc.nexus: DEBUG
+
+# Actuator (optional)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
