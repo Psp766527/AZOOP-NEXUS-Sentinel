@@ -1,4 +1,4 @@
-package com.azoop.it.asis.nexus.sentinel.application.config;
+package com.azoop.it.asis.nexus.sentinel.security.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

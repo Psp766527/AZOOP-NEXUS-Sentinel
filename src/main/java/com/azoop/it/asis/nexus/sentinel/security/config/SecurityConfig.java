@@ -1,4 +1,4 @@
-package com.azoop.it.asis.nexus.sentinel.application.config;
+package com.azoop.it.asis.nexus.sentinel.security.config;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
